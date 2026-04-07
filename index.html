@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alex Carter — Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Noise overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">AC<span class="dot">.</span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero"        class="nav-link active">Home</a></li>
+      <li><a href="#about"       class="nav-link">About</a></li>
+      <li><a href="#skills"      class="nav-link">Skills</a></li>
+      <li><a href="#projects"    class="nav-link">Projects</a></li>
+      <li><a href="#certifications" class="nav-link">Certs</a></li>
+      <li><a href="#achievements" class="nav-link">Awards</a></li>
+      <li><a href="#contact"     class="nav-link">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn-hire">Hire Me</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="orb orb-blue"></div>
+      <div class="orb orb-orange"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge"><span class="badge-dot"></span> Available for work</div>
+      <h1 class="hero-title">
+        <span class="line">Hi, I'm</span>
+        <span class="line name-line">Alex<span class="accent"> Carter</span></span>
+        <span class="line sub-line">Full‑Stack Developer</span>
+      </h1>
+      <p class="hero-desc">I craft high‑performance digital experiences that merge clean architecture with stunning design — from pixel‑perfect UIs to scalable back‑end systems.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#" class="btn-ghost" id="downloadCV">Download CV <i class="fa-solid fa-download"></i></a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" data-target="5">0</span><span>+</span><p>Years Exp.</p></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><span class="stat-num" data-target="80">0</span><span>+</span><p>Projects</p></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><span class="stat-num" data-target="30">0</span><span>+</span><p>Clients</p></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><span class="stat-num" data-target="12">0</span><span></span><p>Awards</p></div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="avatar-frame">
+        <div class="avatar-ring ring-1"></div>
+        <div class="avatar-ring ring-2"></div>
+        <div class="avatar-img">
+          <div class="avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+        </div>
+        <!-- Floating tech badges -->
+        <div class="tech-badge tb-1"><i class="fa-brands fa-react"></i> React</div>
+        <div class="tech-badge tb-2"><i class="fa-brands fa-node-js"></i> Node</div>
+        <div class="tech-badge tb-3"><i class="fa-brands fa-python"></i> Python</div>
+        <div class="tech-badge tb-4"><i class="fa-solid fa-database"></i> SQL</div>
+        <div class="rating-card">
+          <div class="rating-stars">★★★★★</div>
+          <p>Top Rated</p>
+          <span>5.0 / 5.0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ── TICKER ── -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>React</span><span class="bull">◆</span>
+      <span>Node.js</span><span class="bull">◆</span>
+      <span>TypeScript</span><span class="bull">◆</span>
+      <span>Python</span><span class="bull">◆</span>
+      <span>MongoDB</span><span class="bull">◆</span>
+      <span>Docker</span><span class="bull">◆</span>
+      <span>AWS</span><span class="bull">◆</span>
+      <span>GraphQL</span><span class="bull">◆</span>
+      <span>Next.js</span><span class="bull">◆</span>
+      <span>PostgreSQL</span><span class="bull">◆</span>
+      <span>Kubernetes</span><span class="bull">◆</span>
+      <span>TailwindCSS</span><span class="bull">◆</span>
+      <!-- duplicate for seamless loop -->
+      <span>React</span><span class="bull">◆</span>
+      <span>Node.js</span><span class="bull">◆</span>
+      <span>TypeScript</span><span class="bull">◆</span>
+      <span>Python</span><span class="bull">◆</span>
+      <span>MongoDB</span><span class="bull">◆</span>
+      <span>Docker</span><span class="bull">◆</span>
+      <span>AWS</span><span class="bull">◆</span>
+      <span>GraphQL</span><span class="bull">◆</span>
+    </div>
+  </div>
+
+  <!-- ── ABOUT ── -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-label">01 — About Me</div>
+      <div class="about-grid">
+        <div class="about-left reveal">
+          <h2 class="section-title">Building the Future,<br><span class="accent">One Line</span> at a Time</h2>
+          <p>I'm a passionate full-stack developer based in San Francisco, specialising in building exceptional digital experiences. With a strong foundation in both front-end aesthetics and back-end architecture, I deliver end-to-end solutions that are fast, scalable, and delightful.</p>
+          <p>When I'm not coding, I'm contributing to open-source, writing tech articles, or exploring the latest in AI/ML research.</p>
+          <div class="about-tags">
+            <span class="tag">Problem Solver</span>
+            <span class="tag">Team Leader</span>
+            <span class="tag">Open Source</span>
+            <span class="tag">Speaker</span>
+            <span class="tag">Mentor</span>
+          </div>
+          <div class="about-cta">
+            <a href="#contact" class="btn-primary">Let's Talk</a>
+          </div>
+        </div>
+
+        <div class="about-right reveal">
+          <div class="info-cards">
+            <div class="info-card ic-blue">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <h4>Education</h4>
+              <p>B.Sc. Computer Science<br><span>MIT, 2019</span></p>
+            </div>
+            <div class="info-card ic-orange">
+              <i class="fa-solid fa-briefcase"></i>
+              <h4>Experience</h4>
+              <p>Senior Dev @ Google<br><span>2021 – Present</span></p>
+            </div>
+            <div class="info-card ic-blue">
+              <i class="fa-solid fa-map-marker-alt"></i>
+              <h4>Location</h4>
+              <p>San Francisco, CA<br><span>Remote Friendly ✓</span></p>
+            </div>
+            <div class="info-card ic-orange">
+              <i class="fa-solid fa-language"></i>
+              <h4>Languages</h4>
+              <p>English, Spanish<br><span>French (basic)</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-label">02 — Skills & Expertise</div>
+      <h2 class="section-title reveal">What I <span class="accent">Bring</span> to the Table</h2>
+
+      <div class="skills-tabs">
+        <button class="tab-btn active" data-tab="technical">Technical</button>
+        <button class="tab-btn" data-tab="tools">Tools</button>
+        <button class="tab-btn" data-tab="soft">Soft Skills</button>
+      </div>
+
+      <div class="tab-panel active" id="tab-technical">
+        <div class="skills-grid">
+          <div class="skill-card reveal" data-skill="React / Next.js" data-pct="95" data-color="blue">
+            <div class="skill-icon"><i class="fa-brands fa-react"></i></div>
+            <div class="skill-info">
+              <div class="skill-name">React / Next.js</div>
+              <div class="skill-bar"><div class="skill-fill" data-w="95"></div></div>
+              <div class="skill-pct">95%</div>
+            </div>
+          </div>
+          <div class="skill-card reveal" data-pct="90" data-color="orange">
+            <div class="skill-icon"><i class="fa-brands fa-node-js"></i></div>
+            <div class="skill-info">
+              <div class="skill-name">Node.js / Express</div>
+              <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
+              <div class="skill-pct">90%</div>
+            </div>
+          </div>
+          <div class="skill-card reveal" data-pct="88" data-color="blue">
+            <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+            <div class="skill-info">
+              <div class="skill-name">Python / Django</div>
+              <div class="skill-bar"><div class="skill-fill" data-w="88"></div></div>
+              <div class="skill-pct">88%</div>
+            </div>
+          </div>
+          <div class="skill-card reveal" data-pct="85" data-color="orange">
+            <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+            <div class="skill-info">
+              <div class="skill-name">TypeScript</div>
+              <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
+              <div class="skill-pct">85%</div>
+            </div>
+          </div>
+          <div class="skill-card reveal" data-pct="80" data-color="blue">
+            <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+            <div class="skill-info">
+              <div class="skill-name">PostgreSQL / MongoDB</div>
+              <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
+              <div class="skill-pct">80%</div>
+            </div>
+          </div>
+          <div class="skill-card reveal" data-pct="78" data-color="orange">
+            <div class="skill-icon"><i class="fa-brands fa-aws"></i></div>
+            <div class="skill-info">
+              <div class="skill-name">AWS / Cloud</div>
+              <div class="skill-bar"><div class="skill-fill" data-w="78"></div></div>
+              <div class="skill-pct">78%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-tools">
+        <div class="tools-grid">
+          <div class="tool-chip reveal"><i class="fa-brands fa-docker"></i> Docker</div>
+          <div class="tool-chip reveal"><i class="fa-brands fa-git-alt"></i> Git & GitHub</div>
+          <div class="tool-chip reveal"><i class="fa-solid fa-infinity"></i> CI/CD</div>
+          <div class="tool-chip reveal"><i class="fa-solid fa-cloud"></i> Kubernetes</div>
+          <div class="tool-chip reveal"><i class="fa-brands fa-figma"></i> Figma</div>
+          <div class="tool-chip reveal"><i class="fa-solid fa-terminal"></i> Linux / Bash</div>
+          <div class="tool-chip reveal"><i class="fa-solid fa-bolt"></i> GraphQL</div>
+          <div class="tool-chip reveal"><i class="fa-solid fa-fire"></i> Firebase</div>
+          <div class="tool-chip reveal"><i class="fa-brands fa-stripe"></i> Stripe API</div>
+          <div class="tool-chip reveal"><i class="fa-solid fa-robot"></i> OpenAI API</div>
+          <div class="tool-chip reveal"><i class="fa-solid fa-chart-line"></i> Analytics</div>
+          <div class="tool-chip reveal"><i class="fa-solid fa-shield"></i> Auth / OAuth</div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-soft">
+        <div class="soft-grid">
+          <div class="soft-card reveal">
+            <div class="soft-icon" style="background:var(--blue-light)"><i class="fa-solid fa-users" style="color:var(--blue)"></i></div>
+            <h4>Leadership</h4>
+            <p>Led cross-functional teams of 8+ engineers to ship products on time.</p>
+          </div>
+          <div class="soft-card reveal">
+            <div class="soft-icon" style="background:var(--orange-light)"><i class="fa-solid fa-comments" style="color:var(--orange)"></i></div>
+            <h4>Communication</h4>
+            <p>Delivered talks at 3 international tech conferences.</p>
+          </div>
+          <div class="soft-card reveal">
+            <div class="soft-icon" style="background:var(--blue-light)"><i class="fa-solid fa-lightbulb" style="color:var(--blue)"></i></div>
+            <h4>Problem Solving</h4>
+            <p>Strong analytical mindset honed through competitive programming.</p>
+          </div>
+          <div class="soft-card reveal">
+            <div class="soft-icon" style="background:var(--orange-light)"><i class="fa-solid fa-clock" style="color:var(--orange)"></i></div>
+            <h4>Time Management</h4>
+            <p>Consistently delivering high-quality work under tight deadlines.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Radar chart widget -->
+      <div class="radar-widget reveal">
+        <h3>Proficiency Radar</h3>
+        <canvas id="radarChart" width="320" height="320"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-label">03 — Projects</div>
+      <h2 class="section-title reveal">Featured <span class="accent">Work</span></h2>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web App</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="ai">AI / ML</button>
+        <button class="filter-btn" data-filter="oss">Open Source</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-img" style="background: linear-gradient(135deg,#1a6cf5 0%,#0a3fa8 100%)">
+            <div class="project-icon"><i class="fa-solid fa-store"></i></div>
+            <div class="project-overlay">
+              <a href="#" class="proj-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+              <a href="#" class="proj-link"><i class="fa-brands fa-github"></i> Code</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="proj-tag">Web App</span>
+            <h3>ShopSphere E-Commerce</h3>
+            <p>Full-stack marketplace with real-time inventory, Stripe payments, and AI-powered recommendations.</p>
+            <div class="proj-tech"><span>React</span><span>Node.js</span><span>MongoDB</span><span>Stripe</span></div>
+          </div>
+        </div>
+
+        <div class="project-card reveal featured" data-category="ai">
+          <div class="project-img" style="background: linear-gradient(135deg,#ff6b1a 0%,#c93d00 100%)">
+            <div class="project-icon"><i class="fa-solid fa-robot"></i></div>
+            <div class="project-overlay">
+              <a href="#" class="proj-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+              <a href="#" class="proj-link"><i class="fa-brands fa-github"></i> Code</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="proj-tag orange">AI / ML</span>
+            <h3>NeuralChat AI Assistant</h3>
+            <p>Context-aware chatbot powered by GPT-4, with memory, tools, and multi-modal input support.</p>
+            <div class="proj-tech"><span>Python</span><span>OpenAI</span><span>FastAPI</span><span>React</span></div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="mobile">
+          <div class="project-img" style="background: linear-gradient(135deg,#1a6cf5 0%,#ff6b1a 100%)">
+            <div class="project-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+            <div class="project-overlay">
+              <a href="#" class="proj-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+              <a href="#" class="proj-link"><i class="fa-brands fa-github"></i> Code</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="proj-tag">Mobile</span>
+            <h3>FitTrack Pro App</h3>
+            <p>React Native fitness tracker with ML-powered form correction via camera and wearable sync.</p>
+            <div class="proj-tech"><span>React Native</span><span>TensorFlow</span><span>Firebase</span></div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="oss">
+          <div class="project-img" style="background: linear-gradient(135deg,#0a3fa8 0%,#1a6cf5 100%)">
+            <div class="project-icon"><i class="fa-brands fa-github"></i></div>
+            <div class="project-overlay">
+              <a href="#" class="proj-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+              <a href="#" class="proj-link"><i class="fa-brands fa-github"></i> Code</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="proj-tag">Open Source</span>
+            <h3>UIKit Pro Library</h3>
+            <p>Open-source React component library with 120+ accessible, animated components. 2.4k GitHub stars.</p>
+            <div class="proj-tech"><span>React</span><span>TypeScript</span><span>Storybook</span></div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-img" style="background: linear-gradient(135deg,#c93d00 0%,#ff6b1a 100%)">
+            <div class="project-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <div class="project-overlay">
+              <a href="#" class="proj-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+              <a href="#" class="proj-link"><i class="fa-brands fa-github"></i> Code</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="proj-tag orange">Web App</span>
+            <h3>DataVault Dashboard</h3>
+            <p>Real-time analytics platform with interactive D3.js charts, WebSocket updates, and role-based auth.</p>
+            <div class="proj-tech"><span>Next.js</span><span>D3.js</span><span>PostgreSQL</span><span>WS</span></div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="ai">
+          <div class="project-img" style="background: linear-gradient(135deg,#1a6cf5 0%,#c93d00 100%)">
+            <div class="project-icon"><i class="fa-solid fa-eye"></i></div>
+            <div class="project-overlay">
+              <a href="#" class="proj-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+              <a href="#" class="proj-link"><i class="fa-brands fa-github"></i> Code</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="proj-tag">AI / ML</span>
+            <h3>VisionAI Image Classifier</h3>
+            <p>CNN-based image classifier with transfer learning achieving 97% accuracy on custom datasets.</p>
+            <div class="proj-tech"><span>Python</span><span>PyTorch</span><span>FastAPI</span><span>Docker</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CERTIFICATIONS ── -->
+  <section class="section certs-section" id="certifications">
+    <div class="container">
+      <div class="section-label">04 — Certifications</div>
+      <h2 class="section-title reveal">Verified <span class="accent">Credentials</span></h2>
+      <div class="certs-grid">
+
+        <div class="cert-card reveal">
+          <div class="cert-badge"><i class="fa-brands fa-aws"></i></div>
+          <div class="cert-body">
+            <span class="cert-issuer">Amazon Web Services</span>
+            <h4>AWS Solutions Architect</h4>
+            <p>Professional Level · 2023</p>
+            <div class="cert-ribbon">Verified</div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-badge orange"><i class="fa-brands fa-google"></i></div>
+          <div class="cert-body">
+            <span class="cert-issuer">Google</span>
+            <h4>Professional Cloud Developer</h4>
+            <p>GCP · 2022</p>
+            <div class="cert-ribbon orange">Verified</div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-badge"><i class="fa-solid fa-brain"></i></div>
+          <div class="cert-body">
+            <span class="cert-issuer">Coursera / DeepLearning.AI</span>
+            <h4>Deep Learning Specialization</h4>
+            <p>5 Courses · 2022</p>
+            <div class="cert-ribbon">Verified</div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-badge orange"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="cert-body">
+            <span class="cert-issuer">CompTIA</span>
+            <h4>Security+ Certification</h4>
+            <p>SY0-601 · 2021</p>
+            <div class="cert-ribbon orange">Verified</div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-badge"><i class="fa-brands fa-microsoft"></i></div>
+          <div class="cert-body">
+            <span class="cert-issuer">Microsoft</span>
+            <h4>Azure Developer Associate</h4>
+            <p>AZ-204 · 2023</p>
+            <div class="cert-ribbon">Verified</div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-badge orange"><i class="fa-solid fa-code"></i></div>
+          <div class="cert-body">
+            <span class="cert-issuer">Meta</span>
+            <h4>React Developer Certificate</h4>
+            <p>Professional · 2023</p>
+            <div class="cert-ribbon orange">Verified</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ACHIEVEMENTS ── -->
+  <section class="section achievements-section" id="achievements">
+    <div class="container">
+      <div class="section-label">05 — Achievements</div>
+      <h2 class="section-title reveal">Awards &amp; <span class="accent">Recognition</span></h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="tl-icon blue"><i class="fa-solid fa-trophy"></i></div>
+          <div class="tl-card">
+            <span class="tl-year">2024</span>
+            <h4>Google Developer Expert</h4>
+            <p>Recognised by Google as a GDE in Web Technologies &amp; Angular.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="tl-icon orange"><i class="fa-solid fa-star"></i></div>
+          <div class="tl-card">
+            <span class="tl-year">2023</span>
+            <h4>Forbes 30 Under 30</h4>
+            <p>Listed in Forbes Technology category for contributions to open-source and developer tooling.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="tl-icon blue"><i class="fa-solid fa-medal"></i></div>
+          <div class="tl-card">
+            <span class="tl-year">2023</span>
+            <h4>Hackathon World Champion</h4>
+            <p>1st place at Global AI Hackathon 2023 (1,200 participants) with NeuralChat project.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="tl-icon orange"><i class="fa-solid fa-award"></i></div>
+          <div class="tl-card">
+            <span class="tl-year">2022</span>
+            <h4>Open Source Contributor of the Year</h4>
+            <p>Awarded by the Open Source Initiative for 500+ merged PRs across 40 repositories.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="tl-icon blue"><i class="fa-solid fa-microphone"></i></div>
+          <div class="tl-card">
+            <span class="tl-year">2022</span>
+            <h4>Speaker — React Summit</h4>
+            <p>Delivered "Micro-frontends at Scale" to 5,000+ attendees in Amsterdam.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="tl-icon orange"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="tl-card">
+            <span class="tl-year">2019</span>
+            <h4>Summa Cum Laude — MIT</h4>
+            <p>Graduated with highest honours, Thesis: "Adaptive ML Systems in Production Environments."</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ── -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-label">06 — Testimonials</div>
+      <h2 class="section-title reveal">What Clients <span class="accent">Say</span></h2>
+      <div class="testimonial-slider" id="testimonialSlider">
+        <div class="testimonial-track" id="testimonialTrack">
+
+          <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <p>Alex delivered a world-class e-commerce platform that exceeded every expectation. Performance, design, and reliability — all top-notch.</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:var(--blue)">JM</div>
+              <div>
+                <strong>James Mitchell</strong>
+                <span>CTO, ShopSphere Inc.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <p>One of the most talented developers I've worked with. Alex's ability to translate complex requirements into elegant solutions is unmatched.</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:var(--orange)">SR</div>
+              <div>
+                <strong>Sarah Rodriguez</strong>
+                <span>VP Engineering, Google</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <p>Alex built our AI assistant from scratch in 6 weeks. The code quality and the UX are both exceptional. Will definitely work together again.</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:var(--blue)">NK</div>
+              <div>
+                <strong>Nina Kovač</strong>
+                <span>Founder, NeuralOps</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn" id="prevSlide"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button class="slider-btn" id="nextSlide"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-label">07 — Contact</div>
+      <h2 class="section-title reveal">Let's Build <span class="accent">Together</span></h2>
+
+      <div class="contact-grid">
+        <div class="contact-left reveal">
+          <p class="contact-intro">Whether you have a project in mind, want to collaborate, or just say hello — I'd love to hear from you. Typically reply within 24 hours.</p>
+          <div class="contact-info-list">
+            <div class="ci-item">
+              <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <span>Email</span>
+                <a href="mailto:alex@example.com">alex@example.com</a>
+              </div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon orange"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <span>Phone</span>
+                <a href="tel:+14155550123">+1 (415) 555-0123</a>
+              </div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon"><i class="fa-solid fa-map-marker-alt"></i></div>
+              <div>
+                <span>Location</span>
+                <p>San Francisco, CA, USA</p>
+              </div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-btn"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="social-btn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="social-btn orange"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-btn orange"><i class="fa-brands fa-dribbble"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-right reveal">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="John Doe" required/>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="john@example.com" required/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <input type="text" placeholder="Project Inquiry"/>
+            </div>
+            <div class="form-group">
+              <label>Budget Range</label>
+              <select>
+                <option>Select Budget</option>
+                <option>$1k – $5k</option>
+                <option>$5k – $15k</option>
+                <option>$15k – $50k</option>
+                <option>$50k+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea rows="5" placeholder="Tell me about your project…" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary form-submit">
+              Send Message <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i class="fa-solid fa-circle-check"></i> Message sent! I'll reply within 24 hours.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="nav-logo">AC<span class="dot">.</span></div>
+        <p>Crafting digital excellence, one commit at a time.</p>
+        <ul class="footer-nav">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Alex Carter. Designed &amp; built with ❤️</p>
+        <p>Made with HTML, CSS &amp; JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="script.js"></script>
+</body>
+</html>
