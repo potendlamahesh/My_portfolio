@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     dot.style.left  = mx + 'px';
     dot.style.top   = my + 'px';
   });
-
-  (function animRing() {
+/* ── 20. MINI ACTIVITY WIDGET ── */
+  (function animRing() {/* ── 20. MINI ACTIVITY WIDGET ── */
     rx += (mx - rx) * .12;
     ry += (my - ry) * .12;
     ring.style.left = rx + 'px';
@@ -447,35 +447,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  /* ── 20. MINI ACTIVITY WIDGET ── */
-  const activity = document.createElement('div');
-  activity.innerHTML = `
-    <div style="font-weight:700;font-size:.8rem;margin-bottom:8px;color:#0f1623">
-      🟢 Online Now
-    </div>
-    <div style="font-size:.72rem;color:#6b7692;">Currently building something cool…</div>
-    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap">
-      <span style="background:#e8f0fe;color:#1a6cf5;border-radius:50px;padding:3px 10px;font-size:.7rem;font-weight:600;">Open to work</span>
-      <span style="background:#fff0e8;color:#ff6b1a;border-radius:50px;padding:3px 10px;font-size:.7rem;font-weight:600;">Freelance ✓</span>
-    </div>
-  `;
-  activity.style.cssText = `
-    position: fixed; bottom: 90px; left: 32px; z-index: 900;
-    background: #fff; border: 1px solid #e4e9f5; border-radius: 14px;
-    padding: 16px 18px; box-shadow: 0 8px 32px rgba(26,108,245,.12);
-    max-width: 200px; animation: fadeUp .8s 1s both;
-    display:none;
-  `;
-  document.body.appendChild(activity);
-
-  // Show after 3 seconds
-  setTimeout(() => {
-    activity.style.display = 'block';
-    activity.style.animation = 'fadeUp .5s both';
-  }, 3000);
-
-  // Close on click
-  activity.addEventListener('click', () => activity.style.display = 'none');
+  
 
   console.log('%c👋 Hey Developer!', 'font-size:24px;color:#1a6cf5;font-weight:bold');
   console.log('%cThis portfolio was built with pure HTML, CSS & JS. No frameworks needed!', 'color:#ff6b1a;');
