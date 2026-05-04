@@ -254,12 +254,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ── 12. DOWNLOAD CV (demo) ── */
-  document.getElementById('downloadCV').addEventListener('click', e => {
-  e.preventDefault();
-  const a = document.createElement('a');
-  a.href = 'Mahesh_Resume.pdf'; // make sure file exists
-  a.download = 'Mahesh_Resume.pdf';
-  a.click();
+  document.getElementById("downloadCV").addEventListener("click", function () {
+  const link = document.createElement("a");
+  link.href = "Mahesh_Resume.pdf";
+  link.download = "Mahesh_Resume.pdf";
+  link.click();
 });
 
 
