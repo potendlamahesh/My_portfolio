@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════
-   ALEX CARTER — PORTFOLIO  |  style.css
+   MAHESH POTENDLA — PORTFOLIO |  style.css
    Palette: White + Blue (#1a6cf5) + Orange (#ff6b1a)
 ═══════════════════════════════════════════════ */
 
@@ -35,7 +35,7 @@ body {
   background: var(--white);
   color: var(--text);
   overflow-x: hidden;
-  cursor: none;
+  cursor: default;
 }
 
 a { text-decoration: none; color: inherit; }
@@ -61,34 +61,10 @@ input, textarea, select, button { font-family: inherit; }
   position: fixed; inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
   pointer-events: none;
-  z-index: 9999;
+  z-index: 0;
   mix-blend-mode: overlay;
 }
 
-/* ── CUSTOM CURSOR ── */
-.cursor-dot, .cursor-ring {
-  position: fixed;
-  top: 0; left: 0;
-  pointer-events: none;
-  z-index: 10000;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: opacity .3s;
-}
-.cursor-dot {
-  width: 8px; height: 8px;
-  background: var(--orange);
-}
-.cursor-ring {
-  width: 36px; height: 36px;
-  border: 2px solid var(--blue);
-  transition: transform .12s, width .3s, height .3s, border-color .3s;
-}
-body:has(a:hover) .cursor-ring,
-body:has(button:hover) .cursor-ring {
-  width: 56px; height: 56px;
-  border-color: var(--orange);
-}
 
 /* ── NAVBAR ── */
 .navbar {
@@ -151,7 +127,7 @@ body:has(button:hover) .cursor-ring {
   gap: 5px;
   background: none;
   border: none;
-  cursor: none;
+  cursor: pointer;
   margin-left: 16px;
 }
 .hamburger span {
@@ -173,7 +149,7 @@ body:has(button:hover) .cursor-ring {
   color: #fff;
   font-weight: 600;
   font-size: .9rem;
-  cursor: none;
+  cursor: pointer;
   transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
   border: none;
 }
@@ -192,7 +168,7 @@ body:has(button:hover) .cursor-ring {
   color: var(--text);
   font-weight: 600;
   font-size: .9rem;
-  cursor: none;
+  cursor: pointer;
   transition: border-color var(--transition), color var(--transition), transform var(--transition);
 }
 .btn-ghost:hover {
@@ -242,7 +218,7 @@ body:has(button:hover) .cursor-ring {
   position: relative;
   z-index: 2;
   max-width: 580px;
-  padding: 60px 0 60px 64px;
+  padding: 60px 24px;
 }
 
 .hero-badge {
@@ -541,7 +517,7 @@ body:has(button:hover) .cursor-ring {
   font-size: .9rem;
   font-weight: 600;
   color: var(--text-muted);
-  cursor: none;
+  cursor: pointer;
   border-bottom: 3px solid transparent;
   margin-bottom: -2px;
   transition: color var(--transition), border-color var(--transition);
@@ -668,7 +644,7 @@ body:has(button:hover) .cursor-ring {
   padding: 8px 20px;
   font-size: .85rem;
   font-weight: 500;
-  cursor: none;
+  cursor: pointer;
   transition: all var(--transition);
 }
 .filter-btn:hover, .filter-btn.active {
@@ -909,7 +885,7 @@ body:has(button:hover) .cursor-ring {
   color: var(--text);
   font-size: .9rem;
   display: flex; align-items: center; justify-content: center;
-  cursor: none;
+  cursor: pointer;
   transition: all var(--transition);
 }
 .slider-btn:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
@@ -919,7 +895,7 @@ body:has(button:hover) .cursor-ring {
   border-radius: 50%;
   background: var(--border);
   border: none;
-  cursor: none;
+  cursor: pointer;
   transition: all var(--transition);
 }
 .dot-btn.active { background: var(--blue); width: 24px; border-radius: 50px; }
@@ -1039,7 +1015,7 @@ body:has(button:hover) .cursor-ring {
   border: none;
   font-size: 1rem;
   display: flex; align-items: center; justify-content: center;
-  cursor: none;
+  cursor: pointer;
   box-shadow: var(--shadow-md);
   opacity: 0;
   transform: translateY(20px);
