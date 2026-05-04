@@ -4,28 +4,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ── 1. CUSTOM CURSOR ── */
-  const dot  = document.getElementById('cursorDot');
-  const ring = document.getElementById('cursorRing');
-  let mx = 0, my = 0, rx = 0, ry = 0;
-
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    dot.style.left  = mx + 'px';
-    dot.style.top   = my + 'px';
-  });
-/* ── 20. MINI ACTIVITY WIDGET ── */
-  (function animRing() {/* ── 20. MINI ACTIVITY WIDGET ── */
-    rx += (mx - rx) * .12;
-    ry += (my - ry) * .12;
-    ring.style.left = rx + 'px';
-    ring.style.top  = ry + 'px';
-    requestAnimationFrame(animRing);
-  })();
-
-  document.addEventListener('mouseleave', () => { dot.style.opacity = '0'; ring.style.opacity = '0'; });
-  document.addEventListener('mouseenter', () => { dot.style.opacity = '1'; ring.style.opacity = '1'; });
-
 
   /* ── 2. NAVBAR SCROLL ── */
   const navbar = document.getElementById('navbar');
@@ -148,40 +126,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ── 9. TESTIMONIAL SLIDER ── */
-  const track = document.getElementById('testimonialTrack');
-  const cards = track.querySelectorAll('.testimonial-card');
-  const dotsWrap = document.getElementById('sliderDots');
-  let currentSlide = 0;
-  let autoSlide;
-
-  cards.forEach((_, i) => {
-    const d = document.createElement('button');
-    d.className = 'dot-btn' + (i === 0 ? ' active' : '');
-    d.addEventListener('click', () => goTo(i));
-    dotsWrap.appendChild(d);
-  });
-
-  function goTo(n) {
-    currentSlide = (n + cards.length) % cards.length;
-    track.style.transform = `translateX(-${currentSlide * 100}%)`;
-    dotsWrap.querySelectorAll('.dot-btn').forEach((d, i) => d.classList.toggle('active', i === currentSlide));
-  }
-
-  document.getElementById('prevSlide').addEventListener('click', () => { goTo(currentSlide - 1); resetAuto(); });
-  document.getElementById('nextSlide').addEventListener('click', () => { goTo(currentSlide + 1); resetAuto(); });
-
-  function resetAuto() { clearInterval(autoSlide); autoSlide = setInterval(() => goTo(currentSlide + 1), 5000); }
-  resetAuto();
-
-
   /* ── 10. RADAR CHART (Canvas) ── */
   const canvas = document.getElementById('radarChart');
   if (canvas) {
     const ctx = canvas.getContext('2d');
     const SIZE = 320;
     const cx = SIZE / 2, cy = SIZE / 2, R = 110;
-    const labels = ['React', 'Node.js', 'Python', 'TypeScript', 'Cloud', 'DB'];
-    const values = [0.95, 0.90, 0.88, 0.85, 0.78, 0.80];
+    const labels = ['Python', 'Machine Learning', 'NLP', 'FastAPI', 'AI Projects', 'Database'];
+    const values = [0.95, 0.90, 0.88, 0.82, 0.85, 0.80];
     const colors = { blue: '#1a6cf5', orange: '#ff6b1a' };
     let progress = 0;
 
@@ -303,33 +255,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── 12. DOWNLOAD CV (demo) ── */
   document.getElementById('downloadCV').addEventListener('click', e => {
-    e.preventDefault();
-    const a = document.createElement('a');
-    a.href = '#';
-    a.download = 'Alex_Carter_CV.pdf';
-    // In real portfolio: a.href = 'path/to/cv.pdf';
-    alert('📄 CV download would start here. Add your CV file path to the JS!');
-  });
+  e.preventDefault();
+  const a = document.createElement('a');
+  a.href = 'Mahesh_Resume.pdf'; // make sure file exists
+  a.download = 'Mahesh_Resume.pdf';
+  a.click();
+});
 
 
   /* ── 13. PARALLAX HERO SHAPES ── */
-  window.addEventListener('mousemove', e => {
-    const xPct = (e.clientX / window.innerWidth - .5) * 20;
-    const yPct = (e.clientY / window.innerHeight - .5) * 20;
-    document.querySelectorAll('.shape').forEach((s, i) => {
-      const factor = (i + 1) * .4;
-      s.style.transform = `translate(${xPct * factor}px, ${yPct * factor}px)`;
-    });
-    document.querySelectorAll('.orb').forEach((o, i) => {
-      const factor = (i + 1) * .6;
-      o.style.transform = `translate(${-xPct * factor}px, ${-yPct * factor}px)`;
-    });
-  });
 
 
   /* ── 14. TYPED HERO SUBTITLE ── */
   const subLine = document.querySelector('.sub-line');
-  const words = ['Full-Stack Developer', 'UI/UX Enthusiast', 'Open Source Advocate', 'AI/ML Explorer'];
+  const words = ['AI Developer', 'Machine Learning Engineer', 'Python Developer', 'Full Stack Developer'];
   let wi = 0, ci = 0, typing = true;
 
   function typeLoop() {
@@ -449,7 +388,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
 
-  console.log('%c👋 Hey Developer!', 'font-size:24px;color:#1a6cf5;font-weight:bold');
-  console.log('%cThis portfolio was built with pure HTML, CSS & JS. No frameworks needed!', 'color:#ff6b1a;');
+  console.log('%c👋 Welcome to Mahesh Portfolio!', 'font-size:24px;color:#1a6cf5;font-weight:bold');
+  console.log('%c AI Developer | Python | Machine Learning', 'color:#ff6b1a;');
 
 });
